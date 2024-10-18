@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-	const disposable = vscode.commands.registerCommand('sql-columns.selectCurrentCTECols', function() {
+	const disposable = vscode.commands.registerCommand('sql-columns.selectColumnNames', function() {
 		// Get the active text editor
 		const editor = vscode.window.activeTextEditor;
 
@@ -12,7 +12,7 @@ export function activate(context: vscode.ExtensionContext) {
 			
 			// Use regex to find my marker
 			// const re = RegExp("(?<=select)([\s\S]*?)(?=from)");
-			var patt = /(?<=select)([\s\S]*?)(?=from)/gm;
+			var patt = /(?<=SELECT\s)([\s\S]*?)(?=\sFROM)/gim;
 			var match = patt.exec(query);
 
 			if (match) {

@@ -14,16 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "sql-columns.selectCurrentCTECols",
-        "title": "Select Current CTE Columns"
-      },
-      {
-        "command": "sql-columns.selectFinalResultCols",
-        "title": "Select Columns from Final Query"
-      },
-      {
-        "command": "sql-columns.selectFirstCTECols",
-        "title": "Select First CTE Columns"
+        "command": "sql-columns.selectColumnNames",
+        "title": "Select Column Names"
       }
     ]
   },
