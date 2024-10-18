@@ -27,10 +27,13 @@ export function activate(context: vscode.ExtensionContext) {
 				console.log('max cursor position: ', maxPos);
 				const range = new vscode.Range(minPos, maxPos);
 				console.log('range: ', range);
-				
+
 				// Get the text within the range
 				const highlightText = document.getText(range);
 				console.log('highlighted text: ', highlightText);
+				
+				// Select the text in active editor
+				editor.selection = new vscode.Selection(range.start, range.end);
 			}
 		}});
 	context.subscriptions.push(disposable);
