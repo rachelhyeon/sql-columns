@@ -14,8 +14,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "sql-columns.selectColumnNames",
-        "title": "Select Column Names"
+        "command": "sql-columns.selectColumnNamesinTopMostCTE",
+        "title": "Select Column Names in the Top-Most CTE"
+      },
+      {
+        "command": "sql-columns.selectColumnNamesinCurrentCTE",
+        "title": "Select Column Names in Current CTE"
       }
     ]
   },
